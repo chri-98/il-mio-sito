@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Il mio sito personale</title>
+  <link rel="stylesheet" href="stile.css">
+</head>
+<body>
+  <header>
+    <h1>Ciao, sono [Il Tuo Nome]</h1>
+    <p>Benvenuto nel mio sito web! 😊</p>
+    <nav>
+      <ul>
+        <li><a href="#chi-sono">Chi sono</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contatti">Contatti</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="chi-sono">
+    <h2>Chi sono</h2>
+    <img src="profilo.jpg" alt="Foto profilo" width="200">
+    <p>Sono un appassionato di web design e sto imparando a creare siti con HTML e CSS.</p>
+  </section>
+
+  <section id="portfolio">
+    <h2>Portfolio</h2>
+    <ul>
+      <li>🌟 Progetto 1: Sito vetrina</li>
+      <li>💼 Progetto 2: Pagina login personalizzata</li>
+      <li>📱 Progetto 3: Layout per smartphone</li>
+    </ul>
+  </section>
+
+  <section id="contatti">
+    <h2>Contattami</h2>
+    <p>Email: iltuonome@example.com</p>
+    <button id="toggle-mode">🌙 Cambia tema</button>
+  </section>
+
+  <section id="gallery">
+    <h2>Galleria</h2>
+    <div class="grid">
+      <img src="img1.jpg" alt="Immagine 1">
+      <img src="img2.jpg" alt="Immagine 2">
+      <img src="img3.jpg" alt="Immagine 3">
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 [Il Tuo Nome] • Sito creato con ❤️ e HTML/CSS</p>
+  </footer>
+
+  <script>
+    // Toggle Dark Mode
+    const button = document.getElementById('toggle-mode');
+    button.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+    });
+  </script>
+</body>
+</html>
