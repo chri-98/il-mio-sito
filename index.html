@@ -1,61 +1,188 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sito in costruzione - Multiservizi Srls</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background: #f4f4f4;
-            font-family: Arial, sans-serif;
-            color: #333;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            text-align: center;
-        }
+  <title>Multiservizi S.r.l.s.</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+  <style>
+    .navbar-toggler:focus {
+      box-shadow: none;
+    }
 
-        .container {
-            background: #ffffff;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 0 15px rgba(0,0,0,0.2);
-        }
+    .navbar {
+      max-height: 100svh;
+      overflow-x: hidden;
+      overflow-y: auto;
+      overscroll-behavior: contain;
+    }
 
-        h1 {
-            color: #0056b3;
-            margin-bottom: 20px;
-        }
+    .container-fluid.py-1 {
+      background-color: rgba(0, 150, 150, 0.5) !important;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(4px);
+    }
 
-        p {
-            font-size: 18px;
-            margin-bottom: 20px;
-        }
+    .navbar-toggler:not(.collapsed) .open-menu {
+      display: none !important;
+    }
 
-        a.call {
-            display: inline-block;
-            padding: 10px 20px;
-            background: #0056b3;
-            color: #ffffff;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-        }
+    .navbar-toggler:not(.collapsed) .close-menu {
+      display: inline-block !important;
+    }
 
-        a.call:hover {
-            background: #003f80;
-        }
-    </style>
+    .open-menu {
+      width: 1.5em;
+      height: 1.5em;
+      transform: scale(0.8);
+    }
+
+    .close-menu {
+      width: 1.5em;
+      height: 1.5em;
+      vertical-align: middle;
+      line-height: 1.4em;
+      background: no-repeat center center;
+      background-size: contain;
+    }
+
+    .fixed-top,
+    html,
+    body {
+      min-width: 350px;
+    }
+
+    .carousel-item img {
+      min-height: 250px;
+      object-fit: cover;
+    }
+  </style>
+  <script>
+    window.addEventListener('scroll', () => {
+      const x = window.scrollX;
+      document.querySelector('.navbar').style.transform = `translateX(${-x}px)`;
+    });
+  </script>
 </head>
+
 <body>
-    <div class="container">
-        <h1>Multiservizi Srls</h1>
-        <p>Il nostro sito è attualmente in costruzione.</p>
-        <p>Per qualsiasi informazione non esitare a contattarci.</p>
-        <a class="call" href="tel:+393296486132">📞 Chiama il 329 648 6132</a>
+  <!-- Barra del Menu Principale -->
+  <nav class="navbar navbar-expand-sm navbar-light fixed-top py-3">
+    <div class="container-fluid py-1">
+      <!-- Icona del Menu Principale -->
+      <button class="navbar-toggler collapsed border-0 rounded-3 px-2" type="button" data-bs-toggle="collapse"
+        data-bs-target="#menu">
+        <span class="navbar-toggler-icon open-menu"></span>
+        <span class="bi bi-x-lg d-none close-menu"></span>
+      </button>
+      <!-- Logo Aziendale -->
+      <a class="navbar-brand d-flex align-items-center rounded-3 px-2 py-0 me-0 gap-2 order-sm-2"
+        href="https://multiservizisrls.it/">
+        <img src="logo_aziendale.svg" alt="Logo Aziendale" class="rounded-circle" style="height:3rem;">
+        <span class="navbar-text rounded-3 px-2 py-0">Multiservizi S.r.l.s.</span>
+      </a>
+      <!-- Menu Principale -->
+      <div class="navbar-collapse collapse order-sm-1" id="menu">
+        <ul class="navbar-nav rounded-3 p-2 py-sm-0">
+          <li class="nav-item rounded-3">
+            <a class="nav-link px-2" href="#"><strong>PREVIEW</strong></a>
+          </li>
+        </ul>
+      </div>
     </div>
+  </nav>
+  <!-- Vetrina della Homepage -->
+  <div class="carousel slide" data-bs-ride="carousel" id="slider">
+    <!-- Slide della Vetrina -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="vetrina_1.jpg" alt="Vetrina 1" class="d-block w-100">
+      </div>
+      <div class="carousel-item">
+        <img src="vetrina_2.jpg" alt="Vetrina 2" class="d-block w-100">
+      </div>
+    </div>
+    <!-- Pulsanti della Vetrina -->
+    <button class="carousel-control-prev rounded-end-circle" type="button" data-bs-target="#slider"
+      data-bs-slide="prev">
+      <span class="carousel-control-prev-icon rounded-3"></span>
+    </button>
+    <button class="carousel-control-next rounded-start-circle" type="button" data-bs-target="#slider"
+      data-bs-slide="next">
+      <span class="carousel-control-next-icon rounded-3"></span>
+    </button>
+    <div class="carousel-indicators rounded-3 gap-2">
+      <button type="button" data-bs-target="#slider" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#slider" data-bs-slide-to="1"></button>
+    </div>
+  </div>
+
+  <div class="container text-center pt-5">
+    <h3 class="py-2">Sicurezza, Formazione e Servizi Professionali per la tua azienda</h3>
+    <p>La tua sicurezza e il tuo business, al centro delle nostre soluzioni. La Società Multiservizi Srls è il partner
+      ideale per aziende, professionisti e privati che cercano formazione qualificata, consulenza specialistica e
+      servizi operativi in diversi settori. Siamo specializzati nella sicurezza sul lavoro, ma offriamo anche una gamma
+      completa di servizi per supportare le attività produttive, commerciali e tecniche dei nostri clienti.</p>
+    <p>Ogni soluzione proposta nasce dall’ascolto attento e dalla comprensione delle reali esigenze di chi opera
+      quotidianamente in contesti dinamici e spesso complessi. La nostra missione è fornire risposte concrete,
+      tempestive e su misura, capaci di tradurre le normative in strumenti di crescita e tutela reale per chi lavora.
+    </p>
+    <p>Crediamo nell’importanza dell’aggiornamento continuo e nella costruzione di relazioni di fiducia durature: ci
+      impegniamo a garantire servizi all’avanguardia, in linea con le più recenti disposizioni legislative e tecniche,
+      grazie a un team di esperti e formatrici e formatori specializzati in ogni settore di competenza. Siamo
+      consapevoli che la sicurezza e la formazione non siano solo obblighi di legge, ma autentici valori da condividere
+      e promuovere all’interno di ogni azienda.</p>
+    <p>Per questo, accompagniamo i nostri clienti in un percorso di crescita consapevole, offrendo supporto costante,
+      consulenze personalizzate e soluzioni integrate che facilitano la gestione operativa e amministrativa delle
+      attività. Con Società Multiservizi Srls, scegli di affiancarti a un partner che mette al primo posto la qualità,
+      la trasparenza e il rispetto delle persone.</p>
+    <img src="foto1.jpg" class="w-100 py-4">
+  </div>
+
+  <div class="container text-center pt-4">
+    <h3 class="py-2">I nostri servizi principali</h3>
+    <p>Grazie alla nostra esperienza pluriennale e a una struttura organizzativa flessibile, siamo in grado di
+      rispondere rapidamente alle richieste più complesse e di anticipare le evoluzioni normative e tecniche.
+      Collaboriamo con aziende di ogni dimensione, realtà industriali, artigiani e studi professionali, offrendo
+      soluzioni “chiavi in mano” che permettono di ottimizzare i processi interni e garantire il rispetto degli obblighi
+      di legge. Attraverso la formazione continua e l’assistenza costante, creiamo ambienti di lavoro più sicuri,
+      efficienti e orientati all’eccellenza, valorizzando le competenze delle persone e promuovendo una cultura della
+      prevenzione condivisa.</p>
+  </div>
+
+  <div class="container text-center py-4">
+    <h6>Consulenza in Sicurezza sul Lavoro</h6>
+    <h6>Formazione in Sicurezza sul Lavoro</h6>
+    <h6>Sistemi di Gestione Aziendale</h6>
+    <h6>Sopralluoghi Tecnici in Cantiere</h6>
+    <h6>Rilievi e Misurazioni Ambientali</h6>
+    <h6>Vendita e Noleggio Attrezzature e DPI</h6>
+    <h6>Primo Soccorso e Assistenza</h6>
+    <h6>Ingegneria e Edilizia</h6>
+    <img src="foto2.jpg" class="w-100 pt-5">
+  </div>
+
+  <div class="container text-center py-3">
+    <h3 class="py-2">Perché scegliere Multiservizi Srls?</h3>
+    <p>Un unico interlocutore per più servizi
+      <br> Professionisti qualificati in ogni settore
+      <br> Interventi rapidi, efficaci e certificati
+      <br> Soluzioni personalizzate per le esigenze specifiche della tua attività
+    </p>
+  </div>
+
+  <div class="container text-center py-4">
+    <p>Contattaci oggi stesso per un preventivo o una consulenza gratuita.
+      <br>Telefono: <a href="tel:+393296486132"><strong>329 648 6132</strong></a>
+      <br>Email: <a href="mailto:info@multiservizisrls.it"><strong>info@multiservizisrls.it</strong></a>
+      <br>Sito: <a href="https://multiservizisrls.it/"><strong>www.multiservizisrls.it</strong></a>
+      <br><br>
+    </p>
+  </div>
+
 </body>
+
 </html>
