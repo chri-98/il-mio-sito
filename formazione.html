@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <title>Multiservizi S.r.l.s.</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="preload" as="font" type="font/woff2" crossorigin="anonymous"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1/font/fonts/bootstrap-icons.woff2">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1/font/bootstrap-icons.css">
+  <style>
+    .navbar-toggler:focus {
+      box-shadow: none;
+    }
+
+    .navbar {
+      max-height: 100svh;
+      overflow-x: hidden;
+      overflow-y: auto;
+      overscroll-behavior: contain;
+    }
+
+    .navbar::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      pointer-events: none;
+      height: 1rem;
+      backdrop-filter: blur(2px);
+      -webkit-backdrop-filter: blur(2px);
+    }
+
+    .navdiv {
+      background-color: rgba(0, 150, 150, 0.5) !important;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    .navbar-toggler:not(.collapsed) .open-menu {
+      display: none !important;
+    }
+
+    .navbar-toggler:not(.collapsed) .close-menu {
+      display: inline-block !important;
+    }
+
+    .open-menu {
+      width: 1.5em;
+      height: 1.5em;
+      transform: scale(0.8);
+    }
+
+    .close-menu {
+      width: 1.5em;
+      height: 1.5em;
+      vertical-align: middle;
+      line-height: 1.4em;
+      background: no-repeat center center;
+      background-size: contain;
+    }
+
+    .fixed-top,
+    body {
+      min-width: 320px;
+      max-width: 1400px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .carousel-item img {
+      min-height: 300px;
+      object-fit: cover;
+    }
+
+    .balance {
+      text-wrap: balance;
+    }
+
+    .text-justify {
+      text-align: justify;
+      text-justify: inter-word;
+      text-wrap: pretty;
+    }
+
+    .colonna-immagine {
+      max-width: calc(40% + 8rem);
+    }
+  </style>
+  <script>
+    window.addEventListener('scroll', () => {
+      const x = window.scrollX;
+      document.querySelector('.navbar').style.transform = `translateX(${-x}px)`;
+    });
+  </script>
+</head>
+
+<body data-bs-theme="light">
+
+  <!-- Barra del Menu Principale -->
+  <nav class="navbar navbar-expand-sm navbar-light fixed-top py-3 k98">
+    <div class="container-fluid navdiv py-1 rounded-3 k98">
+      <!-- Logo Aziendale -->
+      <a class="navbar-brand d-flex align-items-center rounded-3 px-2 py-0 ms-auto me-0 gap-2 order-sm-2 k98"
+        href="https://multiservizisrls.it/">
+        <span class="navbar-text rounded-3 px-2 py-0 k98" style="font-size: 1.2rem;">Multiservizi S.r.l.s.</span>
+        <img src="logo_aziendale.svg" alt="Logo Aziendale" class="rounded-circle k98" style="height:3rem;">
+      </a>
+    </div>
+  </nav>
+
+  <!-- Vetrina della Homepage -->
+  <div class="carousel slide mb-5 shadow rounded-bottom-3 overflow-hidden k98" data-bs-ride="carousel" id="slider">
+
+    <!-- Slide della Vetrina -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="vetrina_1.jpg" alt="Vetrina 1" class="d-block w-100">
+      </div>
+      <div class="carousel-item">
+        <img src="vetrina_2.jpg" alt="Vetrina 1" class="d-block w-100">
+      </div>
+    </div>
+
+    <!-- Pulsanti della Vetrina -->
+    <button class="carousel-control-prev rounded-end-circle k98" type="button" data-bs-target="#slider"
+      data-bs-slide="prev">
+      <span class="carousel-control-prev-icon rounded-3 k98"></span>
+    </button>
+    <button class="carousel-control-next rounded-start-circle k98" type="button" data-bs-target="#slider"
+      data-bs-slide="next">
+      <span class="carousel-control-next-icon rounded-3 k98"></span>
+    </button>
+    <div class="carousel-indicators rounded-3 gap-2 k98">
+      <button type="button" data-bs-target="#slider" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#slider" data-bs-slide-to="1"></button>
+    </div>
+
+  </div>
+
+  <!-- Sezione -->
+  <section id="s1" class=" k98 pb-4">
+    <div class=" k98 py-2 mx-auto" style="max-width: 90%;">
+      <!-- Titolo centrato -->
+      <div class=" px-3 text-center k98">
+        <div class="d-flex align-items-center justify-content-center my-3 k98">
+          <div class="flex-grow-1" style="height: 2px; background-color: #dee2e6;"></div>
+          <i class="bi bi-cone-striped mx-3 text-primary fs-3"></i>
+          <div class="flex-grow-1" style="height: 2px; background-color: #dee2e6;"></div>
+        </div>
+        <h2 class="display-5 fw-bold balance k98">Formazione Obbligatoria Sicurezza sul Lavoro e Corsi Specialistici
+        </h2>
+        <p class="text-muted balance k98">-</p>
+      </div>
+      <!-- Contenuto immagine + testo -->
+      <div class="row align-items-center k98 mx-auto">
+        <div class="k98 py-3 px-3">
+          <p class="mb-0 k98 text-justify">
+            La Società Multiservizi S.r.l.s. organizza corsi di formazione obbligatoria e specialistica in materia di
+            Sicurezza sul Lavoro, conformemente al D.Lgs. 81/2008, agli Accordi Stato-Regioni e alle più recenti
+            disposizioni del 24 maggio 2025.
+          </p>
+          <p class="mb-0 k98 text-justify">
+            L’obiettivo è garantire alle aziende la piena conformità normativa e la tutela della salute e sicurezza dei
+            lavoratori, attraverso percorsi formativi efficaci, aggiornati e personalizzati sulle esigenze operative di
+            ogni impresa.
+          </p>
+        </div>
+        <!-- Colonna testo -->
+        <div class="k98 py-3 px-3">
+          <p class="mb-0 k98 text-center">
+            Corsi destinati a tutte le figure aziendali previste dal D.Lgs. 81/08:<br>
+            <br>- Formazione lavoratori (generale e specifica): rischio basso, medio e alto
+            <br>- Formazione per Preposti (nuovo Accordo Stato-Regioni maggio 2025)
+            <br>- Formazione Dirigenti
+            <br>- Corso Datore di Lavoro RSPP: aggiornato 2025
+            <br>- Formazione RSPP/ASPP Moduli A, B, C
+            <br>- Formazione Addetti Antincendio: livelli 1, 2 e 3
+            <br>- Formazione Addetti al Primo Soccorso: Gruppi A, B e C
+            <br>- Aggiornamenti periodici obbligatori per tutte le figure
+          </p>
+        </div>
+        <!-- Colonna immagine -->
+        <div class="py-3 k98 px-3">
+          <img src="foto-f1.jpg" class=" pe-none colonna-immagine img-fluid mx-auto d-block rounded shadow k98">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sezione -->
+  <section id="s2" class=" k98 pb-4">
+    <div class=" k98 py-2 mx-auto" style="max-width: 90%;">
+      <!-- Titolo centrato -->
+      <div class=" px-3 text-center k98">
+        <div class="d-flex align-items-center justify-content-center my-3 k98">
+          <div class="flex-grow-1" style="height: 2px; background-color: #dee2e6;"></div>
+          <i class="bi bi-cone-striped mx-3 text-primary fs-3"></i>
+          <div class="flex-grow-1" style="height: 2px; background-color: #dee2e6;"></div>
+        </div>
+        <h2 class="display-5 fw-bold balance k98">Corsi specialistici e abilitanti
+        </h2>
+        <p class="text-muted balance k98">-</p>
+      </div>
+      <!-- Contenuto immagine + testo -->
+      <div class="row align-items-center k98 mx-auto">
+        <!-- Colonna testo -->
+        <div class="k98 py-3 px-3">
+          <p class="mb-0 k98 text-center">
+            Percorsi formativi teorico-pratici per addetti all’utilizzo di attrezzature e lavori ad alto rischio, con
+            rilascio di attestato abilitante valido su tutto il territorio nazionale:<br>
+            <br>• PLE con e senza stabilizzatori
+            <br>• Carrelli elevatori, gru su autocarro e gru mobili
+            <br>• Ponteggi e lavori in quota con DPI di III categoria
+            <br>• Spazi confinati e sospetti di inquinamento
+            <br>• Pes – Pav – Pei (lavori elettrici)
+            <br>• Addetti al montaggio e smontaggio ponteggi
+            <br>• Corsi per H2S / ambienti Seveso
+            <br>• Salvataggio operatore in quota e recupero d’emergenza
+            <br>• Corso per la gestione, rimozione e bonifica dell’amianto
+            <br>(ai sensi del D.Lgs. 81/08, D.M. 06/09/1994, D.P.R. 08/08/1994)
+            <br>• Corso per Sorvegliante ai sensi del D.Lgs. 624/96
+          </p>
+        </div>
+        <!-- Colonna immagine -->
+        <div class="py-3 k98 px-3">
+          <img src="foto-f2.jpg" class=" pe-none colonna-immagine img-fluid mx-auto d-block rounded shadow k98">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sezione -->
+  <section id="s3" class=" k98 pb-4">
+    <div class=" k98 py-2 mx-auto" style="max-width: 90%;">
+      <!-- Titolo centrato -->
+      <div class=" px-3 text-center k98">
+        <div class="d-flex align-items-center justify-content-center my-3 k98">
+          <div class="flex-grow-1" style="height: 2px; background-color: #dee2e6;"></div>
+          <i class="bi bi-cone-striped mx-3 text-primary fs-3"></i>
+          <div class="flex-grow-1" style="height: 2px; background-color: #dee2e6;"></div>
+        </div>
+        <h2 class="display-5 fw-bold balance k98">Modalità di erogazione
+        </h2>
+        <p class="text-muted balance k98">-</p>
+      </div>
+      <!-- Contenuto immagine + testo -->
+      <div class="row align-items-center k98 mx-auto">
+        <!-- Colonna testo -->
+        <div class="k98 pb-3 px-3">
+          <p class="mb-0 k98 text-center">
+            <br>• Lezioni in aula, in videoconferenza o direttamente presso l’azienda
+            <br>• Parte pratica svolta con attrezzature certificate e docenti qualificati
+            <br>• Rilascio attestati e registrazione nel Registro Formazione Aziendale
+            <br>• Corsi programmati periodicamente o su richiesta dell’impresa
+          </p>
+        </div>
+        <!-- Colonna immagine -->
+        <div class="py-3 k98 px-3">
+          <img src="foto-f3.jpg" class=" pe-none colonna-immagine img-fluid mx-auto d-block rounded shadow k98">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sezione -->
+  <section id="s4" class=" k98 pb-4">
+    <div class=" k98 py-2 mx-auto" style="max-width: 90%;">
+      <!-- Titolo centrato -->
+      <div class=" px-3 text-center k98">
+        <div class="d-flex align-items-center justify-content-center my-3 k98">
+          <div class="flex-grow-1" style="height: 2px; background-color: #dee2e6;"></div>
+          <i class="bi bi-cone-striped mx-3 text-primary fs-3"></i>
+          <div class="flex-grow-1" style="height: 2px; background-color: #dee2e6;"></div>
+        </div>
+        <h2 class="display-5 fw-bold balance k98">I vantaggi per la tua impresa
+        </h2>
+        <p class="text-muted balance k98">-</p>
+      </div>
+      <!-- Contenuto immagine + testo -->
+      <div class="row align-items-center k98 mx-auto">
+        <!-- Colonna testo -->
+        <div class="k98 pb-3 px-3">
+          <p class="mb-0 k98 text-center">
+            <br>• Conformità totale agli obblighi formativi di legge
+            <br>• Miglioramento della cultura della sicurezza in azienda
+            <br>• Riduzione del rischio infortuni e sanzioni
+            <br>• Supporto tecnico e documentale continuo (DVR, POS, PSC, DUVRI, Notifiche Preliminari, ecc.)
+          </p>
+        </div>
+        <!-- Colonna immagine -->
+        <div class="py-3 k98 px-3">
+          <img src="foto-f4.jpg" class=" pe-none colonna-immagine img-fluid mx-auto d-block rounded shadow k98">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="footer mt-4">
+    <div class="flex-grow-1 rounded-top-3" style="height: 50px; background-color: rgba(0, 150, 150, 1);"></div>
+  </div>
+
+</body>
+
+</html>
