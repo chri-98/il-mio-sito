@@ -91,6 +91,31 @@
         max-width: calc(40% + 8rem);
       }
     }
+
+    .logo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 20px;
+      /* spazio tra i loghi */
+      align-items: center;
+    }
+
+    .logo-item {
+      height: 90px;
+      /* box invisibile uguale per tutti */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px;
+      box-sizing: border-box;
+    }
+
+    .logo-item img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      display: block;
+    }
   </style>
   <script>
     window.addEventListener('scroll', () => {
@@ -313,6 +338,48 @@
     </div>
   </section>
 
+  <!-- Sezione -->
+  <section id="s4" class=" k98 pb-4">
+    <div class=" k98 py-2 mx-auto" style="max-width: 90%;">
+      <!-- Titolo centrato -->
+      <div class=" px-3 text-center k98">
+        <div class="d-flex align-items-center justify-content-center my-3 k98">
+          <div class="flex-grow-1" style="height: 2px; background-color: #dee2e6;"></div>
+          <i class="bi bi-cone-striped mx-3 text-primary fs-3"></i>
+          <div class="flex-grow-1" style="height: 2px; background-color: #dee2e6;"></div>
+        </div>
+        <h2 class="display-5 fw-bold balance k98">I Nostri Clienti e Partner</h2>
+        <p class="text-muted balance k98">-</p>
+      </div>
+      <div class=" k98 py-3 px-3">
+        <section class="logo-grid">
+          <div class="logo-item"><img
+              src="https://www.bpowerenergia.com/wp-content/themes/bpowerenergia.it/assets/img/share/logo.svg"
+              alt="Logo" loading="lazy"></div>
+          <div class="logo-item"><img
+              src="https://www.graditooleodinamica.it/wp-content/themes/nxcquadro/img/LOGO-GRADITO-CORPORATE.png"
+              alt="Logo" loading="lazy"></div>
+          <div class="logo-item"><img src="https://www.agrolab.com/templates/img/agrolab-logo.svg" alt="Logo"
+              loading="lazy" style="background: #0b7a3c; border-radius: 8px; padding: 8px;"></div>
+          <div class="logo-item"><img src="https://www.plc-spa.it/wp-content/uploads/2022/06/logo_plc_spa.svg"
+              alt="Logo" loading="lazy"></div>
+          <div class="logo-item"><img src="https://www.nicospa.com/wp-content/uploads/2020/06/logo_nico.png" alt="Logo"
+              loading="lazy"></div>
+          <div class="logo-item"><img src="https://sicoi.com/img/logohead.png" alt="Logo" loading="lazy"></div>
+          <div class="logo-item"><img src="https://www.simamspa.it/wp-content/uploads/2021/04/logo-simam-acea.png"
+              alt="Logo" loading="lazy"></div>
+          <div class="logo-item"><img
+              src="https://www.merieuxnutrisciences.com/wp-content/uploads/2024/09/merieux-logo.svg" alt="Logo"
+              loading="lazy"></div>
+          <div class="logo-item"><img src="https://www.teatekgroup.it/wp-content/uploads/2024/09/TeaTek_logoweb-1.png"
+              alt="Logo" loading="lazy"></div>
+          <div class="logo-item"><img src="https://companieslogo.com/img/orig/SGSN.SW-ebaf78b2.svg?t=1720244493"
+              alt="Logo" loading="lazy"></div>
+        </section>
+      </div>
+    </div>
+  </section>
+
   <div class="footer mt-4">
     <div class="flex-grow-1 rounded-top-3" style="height: 50px; background-color: rgba(0, 150, 150, 1);"></div>
   </div>
@@ -320,4 +387,3 @@
 </body>
 
 </html>
-
